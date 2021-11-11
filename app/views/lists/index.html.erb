@@ -1,42 +1,49 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "food-07-512_99519.png" %>
-  <% end %>
+<div class="container">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <div>
+      <%= link_to "#", class: "navbar-brand" do %>
+        <%= image_tag "food-07-512_99519.png" %>
+        <%= image_tag "pngwing.com.png", id: "popcorn" %>
+      <% end %>
+    </div>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <%= link_to "Create a movie list", new_list_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "My lists", lists_path, class: "nav-link" %>
+        <%= link_to "Create a list", new_list_path, class:"btn btn-ghost"%>
       </li>
       <li class="nav-item dropdown">
-        <%= image_tag "https://kitt.lewagon.com/placeholder/users/camillebreillot", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/camillebreillot" />
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "Action", "#", class: "dropdown-item" %>
-          <%= link_to "Another action", "#", class: "dropdown-item" %>
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
         </div>
       </li>
     </ul>
+    </div>
+
   </div>
 </div>
 
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.5)), url(https://ctrlr.org/wp-content/uploads/2021/11/fall-movies-index-1628968089.jpg);">
   <div class="container">
-    <h1>Welcome on Popcorn</h1>
+    <h1>The Popcorn Factory</h1>
     <p>Your favorite movies all in one place </p>
   </div>
 </div>
 
 
 <div class="container mt-4">
-  <h2>My lists</h2>
+  <div class="d-flex justify-content-between my-2">
+    <h2>My lists</h2>
+    <div>
+      <%= link_to "Create a list", new_list_path, class:"btn btn-ghost" %>
+    </div>
+  </div>
 
 
     <div class="row">
@@ -48,6 +55,4 @@
         </div>
       <% end%>
     </div>
-
-  <%= link_to "Create a list", new_list_path, class:"btn btn-info" %>
 </div>

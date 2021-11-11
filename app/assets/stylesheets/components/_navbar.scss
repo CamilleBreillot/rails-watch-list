@@ -1,6 +1,9 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  font-family: 'Outfit', sans-serif;
+  padding-bottom: 12px;
+  padding-top: 12px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -14,4 +17,12 @@
 
 #navbarDropdown {
   margin-right: 10px;
+}
+
+#popcorn {
+  width: 100px;
+}
+
+#id {
+  width: 100px;
 }
