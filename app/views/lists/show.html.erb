@@ -46,9 +46,12 @@
           <%= image_tag bookmark.movie.poster_url, width: 200 %>
           <div class="card-movie-infos">
             <li class="list-unstyled" >
-              <h2><%= bookmark.movie.title %> - <%= bookmark.movie.rating %></h2>
+              <h2><%= bookmark.movie.title %></h2>
               <p><%= bookmark.movie.overview %></p>
-              <p><%= link_to "Delete", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" } %></p>
+              <div class="d-flex justify-content-between">
+                <%= bookmark.movie.rating %>
+                <p><%= link_to "Delete", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" } %></p>
+              </div>
             </li>
           </div>
         </div>
