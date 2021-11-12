@@ -14,7 +14,7 @@
         <%= link_to "Create a movie list", new_list_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to "My lists", lists_path, class: "nav-link" %>
+        <%= link_to "My lists", root_path, class: "nav-link" %>
       </li>
       <li class="nav-item dropdown">
         <%= image_tag "https://kitt.lewagon.com/placeholder/users/camillebreillot", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -34,4 +34,4 @@
   <%= f.submit class:"btn btn-info" %>
 <% end %>
 
-  <%= link_to "Back to lists", lists_path, class:"btn btn-info" %>
+  <%= link_to "Back to lists", root_path, class:"btn btn-info" %>
