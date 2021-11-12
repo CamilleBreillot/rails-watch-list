@@ -29,12 +29,17 @@
   </div>
 </div>
 
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.5)), url(<%= cl_image_path @list.photo.key if @list.photo.attached? %>);">
+  <div class="container">
+    <h1><%= @list.name %></h1>
+  </div>
+</div>
 
-<div class="container my-4">
-  <h2><%= @list.name %></h2>
+
+<div class="container my-5">
 
  <ul>
-    <div class="row mt-4">
+    <div class="row my-5">
       <% @list.bookmarks.each do |bookmark| %>
       <div class="col-4">
         <div class="card-movie">
@@ -51,21 +56,21 @@
       <% end%>
     </div>
     </ul>
+</div>
 
 
+<div class="bg-white py-4">
+  <div class="container">
+    <h2 class="text-center pb-2">Add a movie to your <%= @list.name %> list</h2>
 
-
-
-  <h2 class="mt-4">Add a movie to <%= @list.name %></h2>
-
-  <div class="d-flex">
-    <div class="w-50">
-      <%= simple_form_for([@list, @bookmark]) do |f| %>
-        <%= f.association :movie %>
-        <%= f.input :comment %>
-        <%= f.submit "Add movie", class:"btn btn-info" %>
-      <% end %>
+    <div class="d-flex">
+      <div class="w-50">
+        <%= simple_form_for([@list, @bookmark]) do |f| %>
+          <%= f.association :movie %>
+          <%= f.input :comment %>
+          <%= f.submit "Add movie", class:"btn btn-info" %>
+        <% end %>
+      </div>
     </div>
   </div>
-
 </div>
